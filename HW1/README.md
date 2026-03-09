@@ -53,4 +53,4 @@ python3 main.py --epochs 20 --scheduler reducelronplateau
 
 # Custom run
 
-# python3 main.py --epochs 20 --lr 0.0005 --activation gelu --dropout 0.5 --regularizer l1
+python3 main.py --epochs 20 --lr 0.0005 --activation gelu --dropout 0.5 --regularizer l1
