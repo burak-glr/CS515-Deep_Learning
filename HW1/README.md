@@ -37,20 +37,20 @@
 | "--visualize" | "torchviz", "curves" , "tsne" | Generate plots (multiple plots is possible)
 
 
-Example usage
+### Example usage
 
 ## use GeLU activation function
 
-python3 main.py --activation gelu
+'python3 main.py --activation gelu'
 
 ## use L1 regularization
 
-python3 main.py --regularizer l1
+'python3 main.py --regularizer l1'
 
 ## use 20 epochs for training and reducelronplateau learning rate scheduler
 
-python3 main.py --epochs 20 --scheduler reducelronplateau
+'python3 main.py --epochs 20 --scheduler reducelronplateau'
 
-# Custom run
+## Custom run
 
-python3 main.py --epochs 20 --lr 0.0005 --activation gelu --dropout 0.5 --regularizer l1
+'python3 main.py --epochs 20 --lr 0.0005 --activation gelu --dropout 0.5 --regularizer l1'
