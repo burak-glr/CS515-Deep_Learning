@@ -4,9 +4,13 @@
 
 ### Architecture
 | Parameter | Present in the baseline | Description|
+
 | "--hidden_sizes" | "512 256 128" | Hidden layer sizes |
+
 | "--activation" | "relu" | Activation function: "relu", "leakyrelu", "gelu" |
+
 | "--dropout" | "0.3" | Dropout ration |
+
 | "--bn_after_act" | off | Put Batch Normalization after activation (default: before) |
 
 ### Training
