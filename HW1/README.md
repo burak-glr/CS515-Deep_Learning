@@ -41,7 +41,7 @@
 
 ## use GeLU activation function
 
-'python3 main.py --activation gelu'
+'''python3 main.py --activation gelu'''
 
 ## use L1 regularization
 
