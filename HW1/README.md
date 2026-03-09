@@ -36,8 +36,7 @@
 
 | "--visualize" | "torchviz", "curves" , "tsne" | Generate plots (multiple plots is possible)
 
-
-### Example usage
+#### Example usage
 
 ## use GeLU activation function
 
