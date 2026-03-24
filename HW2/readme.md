@@ -1,7 +1,5 @@
 # Transfer learning and Knowledge Distilation
 
-Entry point for HW2: Transfer Learning and Knowledge Distillation.
-
 Dispatches to one of three task pipelines based on ``--task``:
 
   classify  — train/test a model (CNN, ResNet, MobileNet) from scratch,
@@ -9,9 +7,7 @@ Dispatches to one of three task pipelines based on ``--task``:
   transfer  — fine-tune a pretrained ResNet-18 or VGG-16 on CIFAR-10
                using Option 1 (resize + freeze) or Option 2 (small conv + fine-tune).
   distill   — knowledge distillation from a saved ResNet teacher into a
-               smaller student (CNN or MobileNet); supports standard KD and
-               a modified variant where the teacher probability is assigned
-               to the true class only.
+               smaller student (CNN or MobileNet)
 
 Usage examples::
 
@@ -27,13 +23,13 @@ Usage examples::
     # Transfer learning – Option 2
     python main.py --task transfer --arch resnet18 --transfer_option 2 --epochs 20
 
-    # Standard KD: teacher → SimpleCNN
+    # Standard KD: ResNet-18 → SimpleCNN
     python main.py --task distill --model cnn --distill_mode standard \\
                    --teacher_path best_teacher.pth --epochs 30
 
-    # Modified KD: teacher → MobileNetV2
+    # Modified KD: ResNet-18 → MobileNetV2
     python main.py --task distill --model mobilenet --distill_mode modified \\
                    --teacher_path best_teacher.pth --epochs 30
 
-    # Count FLOPs (requires ptflops: pip install ptflops)
+    # Count FLOPs
     python main.py --task classify --model resnet --count_flops --mode test
